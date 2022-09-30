@@ -122,6 +122,23 @@ a {
   text-decoration: none;
 }
 
+.menu-link {
+  position: relative;
+}
+
+.link.current::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  opacity: 1;
+}
+
 .icon-header {
   fill: currentColor;
   margin-right: 10px; 
@@ -232,10 +249,17 @@ a {
 }
 
 .button-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  position: absolute;
+  right: 8px;
+  top: 8px;
   width: 30px;
   height: 30px;
-  border-radius: 50%; 
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Особливості */
@@ -304,8 +328,31 @@ a {
   width: 370px;
 }
 
-.container-work .item+.item {
+.container-work .item +.item {
   margin-left: 30px;
+}
+
+.description-item {
+  position: relative;
+}
+
+.description {
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 370px;
+height: 70px;
+background-color: rgba(47, 48, 58, 0.8);
+
+}
+
+.description-list {
+  font-weight: 700;
+  line-height: 1.14;
+  color: var(--primary-white-color);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Наша команда */
@@ -486,6 +533,53 @@ a {
 .desing-page {
   display: flex;
   flex-wrap: wrap;
+}
+
+.addition-work:hover .desing-text {
+  opacity: 1;
+}
+
+.addition-work:hover::before {
+  opacity: 1;
+}
+
+.addition-work {
+  position: relative;
+}
+
+.addition-work::before {
+  display: inline-block;
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.desing-text {
+  display: flex;
+  align-items: center;
+  width: 370px;
+  height: 294px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.work-text {
+  width: 322px;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--primary-white-color);
+  font-size: 18px;
+  line-height: 1.56;
 }
 
 .desing-list {

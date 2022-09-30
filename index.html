@@ -21,9 +21,9 @@
             <nav class="main-nav">
                 <a href="./index.html" class="logo"><span>Web</span><span class="studio">Studio</span></a>
                 <ul class="nav-link list">
-                    <li class="item"><a href="Студія" class="link current">Студія</a></li>
-                    <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
-                    <li class="item"><a href="Контакти" class="link">Контакти</a></li>
+                    <li class="item"><a href="Студія" class="menu-link link current">Студія</a></li>
+                    <li class="item"><a href="./portfolio.html" class="menu-link link">Портфоліо</a></li>
+                    <li class="item"><a href="Контакти" class="menu-link link">Контакти</a></li>
                 </ul>
             </nav>
                 <ul class="contact-link list">
@@ -54,7 +54,11 @@
             <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
                     <p></p>
-                    <batton type="button" class="button-close" data-modal-close>X</batton>
+                    <batton type="button" class="button-close" data-modal-close>
+                    <svg class="icon-btn-close" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-close-black"></use>
+                    </svg>
+                    </batton>
                 </div>
             </div>
         </section>
@@ -119,9 +123,13 @@
     <div class="container">
         <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="container-work list">
-            <li class="item">
+            <li class="description-item item">
+            <div class="description"></div>
                 <img class="image-work" src="./images/box1.jpg" alt="руки на клавіатурі перед планшетом" width="370" />
             </li>
+            <div class="description">
+                <p class="description-list">Десктопні додатки</p>
+            </div>
             <li class="item">
                 <img class="image-work" src="./images/img1.jpg" alt="планшет в руках" width="370" />
             </li>
